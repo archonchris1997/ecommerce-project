@@ -1,4 +1,5 @@
-namespace WebApplication1.Data;
+namespace WebApplication1.Models;
+
 
 public class Produto
 {
