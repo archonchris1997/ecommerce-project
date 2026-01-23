@@ -1,15 +1,13 @@
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.Data;
 
+using WebApplication1.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-
-// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// SQLite
+// ✅ SQLite
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("Db")));
 
