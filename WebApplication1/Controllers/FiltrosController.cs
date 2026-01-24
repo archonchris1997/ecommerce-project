@@ -8,13 +8,9 @@ using WebApplication1.Data;
 
 [ApiController]
 [Route("api/filtros")]
-public class FiltrosController
+public class FiltrosController: ControllerBase
 {
-    private readonly AppDbContext _db;
-    public FiltrosController(AppDbContext db) => _db = db;
-
-    [HttpGet("cascade")]
-    public async Task<IActionResult<CascadeFiltersResponse>> Cascade();
+    private readonly FiltersService _service;
 
 
 }

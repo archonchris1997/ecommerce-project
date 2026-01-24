@@ -4,6 +4,4 @@ public class FilterOptionDto
 {
     public string Value { get; set; }
     public int Count { get; set; }
-    
-    
 }
